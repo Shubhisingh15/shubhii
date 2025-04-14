@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - ShareSphere{% endblock %}
+
+{% block content %}
+<section class="dashboard">
+    <h1>Welcome to Your Dashboard</h1>
+    <p>Manage your posts, engage with the community, and explore new content.</p>
+
+    <div class="dashboard-options">
+        <a href="{{ url_for('create_post') }}" class="dashboard-card">📝 Create New Post</a>
+        <a href="{{ url_for('my_posts') }}" class="dashboard-card">📚 My Posts</a>
+        <a href="{{ url_for('account_settings') }}" class="dashboard-card">⚙️ Account Settings</a>
+        <a href="{{ url_for('notifications') }}" class="dashboard-card">🔔 Notifications</a>
+    </div>
+</section>
+{% endblock %}
