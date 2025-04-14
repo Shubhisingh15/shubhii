@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Home - ShareSphere{% endblock %}
+
+{% block content %}
+
+<section class="hero" style="background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxz_mCQjYRd7KRS-1zWZdhKn1cpIPdVD4FUknm65jRuBfxwzChE2-N5sMvLPHvVMslrbw&usqp=CAU') no-repeat center center/cover; text-align: center; color: white; padding: 60px 20px;">
+    <h1>Share, Discover, and Connect with Others</h1>
+    <p>Where passions meet and inspiration begins!</p>
+    <p>Join the community and explore exciting content.</p>
+    <a href="{{ url_for('categories') }}" class="btn">Explore Now</a>
+</section>    
+
+<section class="categories-preview">
+    <h2>Popular Categories</h2>
+    <div class="category-grid">
+        <a href="{{ url_for('recipes') }}" class="category-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtPMGgZ7mLQi0WP8EB1CYx_EayPj5hLfKeJQ&s" alt="Recipes" style="width: 280px; height:auto;">
+            <span>Recipes</span>
+        </a>
+        <a href="{{ url_for('fashion') }}" class="category-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHFR34itWYRg8mr-uWtMm1myrhabyLFxoaOg&s" alt="Fashion" style="width: 280px; height:auto;">
+            <span>Fashion</span>
+        </a>
+        <a href="{{ url_for('reviews') }}" class="category-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfSzJOth7Mn0uWNeuV42Lv2_WZiIZYzMO3bw&s" alt="Product Reviews" style="width: 280px; height:auto;">
+            <span>Product Reviews</span>
+        </a>
+        <a href="{{ url_for('travel') }}" class="category-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYVan-qcxBG5t2JaHIFMfd8ncMfTgbeVnzUg&s" alt="Travel" style="width: 280px; height:auto;">
+            <span>Travel</span>
+        </a>
+        <a href="{{ url_for('diy') }}" class="category-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSenK2m23tJg87vQg94DmDiqh9XCUIvj1p4eg&s" alt="DIY" style="width: 300px; height:auto;">
+            <span>DIY</span>
+        </a>
+        <a href="{{ url_for('wellness') }}" class="category-card">
+            <img src="https://static.wixstatic.com/media/11062b_94fcf9519de448c78c939317dc945269~mv2.jpg/v1/fill/w_568,h_378,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_94fcf9519de448c78c939317dc945269~mv2.jpg" alt="Wellness" style="width: 280px; height:auto;">
+            <span>Wellness</span>
+        </a>
+    </div>
+</section>
+
+{% endblock %}

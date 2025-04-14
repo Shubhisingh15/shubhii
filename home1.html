@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}ShareSphere - Share Your Vibes{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Share, Discover, and Connect with Others</h1>
+    <p>Join the community and explore exciting content.</p>
+    <a href="{{ url_for('categories') }}" class="btn">Explore Now</a>
+</section>
+
+<section id="categories" class="categories">
+    <h2>Explore Categories</h2>
+    <div class="category-grid">
+        <a href="{{ url_for('recipes') }}" class="category-card">Recipes</a>
+        <a href="{{ url_for('fashion') }}" class="category-card">Fashion</a>
+        <a href="{{ url_for('reviews') }}" class="category-card">Product Reviews</a>
+        <a href="{{ url_for('travel') }}" class="category-card">Travel</a>
+        <a href="{{ url_for('diy') }}" class="category-card">DIY</a>
+        <a href="{{ url_for('wellness') }}" class="category-card">Wellness</a>
+    </div>
+</section>
+{% endblock %}

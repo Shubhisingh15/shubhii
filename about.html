@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - ShareSphere{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-text">
+            <h1>Welcome to ShareSphere</h1>
+            <p>
+                ShareSphere is a vibrant, community-driven platform designed to bring people together through shared passions and experiences. Whether you're a foodie, fashion enthusiast, travel lover, DIY creator, or wellness advocate, ShareSphere offers a space to express yourself, explore new ideas, and connect with like-minded individuals. With features like user profiles, engaging content categories, and interactive commenting, it fosters a sense of belonging and inspiration. ShareSphere is more than just a website—it's a social hub where creativity, knowledge, and connection thrive.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu3EGU7OYiwYo7BaY28L1ytzmkYrq6vJTUXA&s" alt="About ShareSphere" style="width: 290px; height:auto">
+        </div>
+    </div>
+</section>
+
+<section class="our-mission">
+    <h2>Our Mission</h2>
+    <p>
+        Our Mission at ShareSphere is to empower individuals to share their knowledge, creativity, and stories while building meaningful connections within a supportive community. We aim to create a safe and inspiring space where people from all walks of life can explore diverse topics, express their passions, and learn from one another. By promoting authenticity, collaboration, and discovery, our mission is to make everyday experiences more enriching and engaging—one shared story at a time.
+    </p>
+</section>
+
+<section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps-container">
+        <div class="step">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZJpvxiWSPNJUiVVTpGL0tgyIBIpBf84G_Ow&s" alt="Share Content" style="width: 290px; height:auto;">
+            <h3>Share Content</h3>
+            <p>Post your experiences, reviews, and creative ideas with the community.</p>
+        </div>
+        <div class="step">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCBzjz2zvoNqzg-aCPoWWPD5LA3P7dZajxKg&s" alt="Explore" style="width: 290px; height:auto;">
+            <h3>Explore</h3>
+            <p>Browse through different categories and discover inspiring content.</p>
+        </div>
+        <div class="step">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkCQVGSzatg9xW-PwuS-ZfUnK0kS10LR_qnQ&s" alt="Connect" style="width: 290px; height:auto;">
+            <h3>Connect</h3>
+            <p>Engage with others through comments, likes, and discussions.</p>
+        </div>
+    </div>
+</section>
+
+<section class="join-us">
+    <h2>Join Our Community</h2>
+    <p>Be part of a vibrant community where sharing and learning go hand in hand.</p>
+    <a href="{{ url_for('register') }}" class="btn">Sign Up Now</a>
+</section>
+{% endblock %}

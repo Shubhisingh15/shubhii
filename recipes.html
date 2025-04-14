@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Recipes - ShareSphere{% endblock %}
+
+{% block content %}
+<section class="recipes-section">
+    <h1>Delicious Recipes</h1>
+    <p>Explore and share your favorite recipes.</p>
+
+    <div class="recipe-grid">
+        {% for recipe in recipes %}
+        <div class="recipe-card">
+            <img src="{{ recipe.image_url }}" alt="{{ recipe.title }}" style="width: 250px; height:auto">
+            <h3>{{ recipe.title }}</h3>
+            <p>User ID: <strong>{{ recipe.user_id }}</strong></p>
+            <p>{{ recipe.description }}</p>
+            <ul>
+                {% for step in recipe.steps %}
+                    <li>{{ step }}</li>
+                {% endfor %}
+            </ul>
+            <p><a href="{{ recipe.tutorial_url }}" target="_blank">Watch Tutorial</a></p>
+            <div class="interactions">
+                <button class="like-btn">❤️ Like</button>
+                <button class="share-btn">🔗 Share</button>
+                <input type="text" class="comment-box" placeholder="Add a comment...">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
