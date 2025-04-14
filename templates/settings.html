@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Settings - ShareSphere{% endblock %}
+
+{% block content %}
+
+<section class="settings-section">
+  <h1>Account Settings</h1>
+  <p>Manage your profile and preferences.</p>
+
+  <form action="{{ url_for('update_settings') }}" method="POST" class="settings-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" value="{{ user.username }}" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="{{ user.email }}" required>
+
+    <label for="password">New Password:</label>
+    <input type="password" id="password" name="password">
+
+    <label for="notifications">Email Notifications:</label>
+    <select id="notifications" name="notifications">
+      <option value="enabled" {% if user.notifications == 'enabled' %}selected{% endif %}>Enabled</option>
+      <option value="disabled" {% if user.notifications == 'disabled' %}selected{% endif %}>Disabled</option>
+    </select>
+
+    <button type="submit" class="btn-save">Save Changes</button>
+  </form>
+</section>
+
+{% endblock %}

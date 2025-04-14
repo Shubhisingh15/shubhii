@@ -74,6 +74,14 @@ def logout():
     flash('You have been logged out.', 'info')
     return redirect(url_for('login'))
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 # Add other routes similarly and protect them:
 @app.route('/categories')
 def categories():

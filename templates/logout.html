@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Logout - ShareSphere{% endblock %}
+
+{% block content %}
+<style>
+    .logout-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        text-align: center;
+    }
+
+    .logout-section h1 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    .logout-section p {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 2rem;
+    }
+
+    .logout-section a.btn {
+        background-color: #6c63ff;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    .logout-section a.btn:hover {
+        background-color: #574fd6;
+    }
+</style>
+
+<section class="logout-section">
+    <h1>You’ve been logged out</h1>
+    <p>Thank you for being a part of ShareSphere. Come back soon!</p>
+    <a href="{{ url_for('login') }}" class="btn">Log In Again</a>
+</section>
+{% endblock %}
