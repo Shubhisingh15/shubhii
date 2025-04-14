@@ -78,8 +78,21 @@ def logout():
 def about():
     return render_template('about.html')
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO messages (name, email, message) VALUES (%s, %s, %s)",
+                       (name, email, message))
+        conn.commit()
+        cursor.close()
+        conn.close()
+        flash('Your message has been sent!', 'success')
+        return redirect(url_for('contact'))
     return render_template('contact.html')
 
 # Add other routes similarly and protect them:

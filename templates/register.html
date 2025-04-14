@@ -8,19 +8,18 @@
     <p>Join ShareSphere and start sharing your passions with the community!</p>
     
     <form action="{{ url_for('register') }}" method="POST" class="register-form">
-        {{ form.hidden_tag() }}
 
         <label for="username">Username:</label>
-        {{ form.username(class="form-input", id="username") }}
+        <input type="text" id="username" class="form-input">
 
         <label for="email">Email:</label>
-        {{ form.email(class="form-input", id="email") }}
+        <input type="email" id="email" class="form-input">
 
         <label for="password">Password:</label>
-        {{ form.password(class="form-input", id="password") }}
+        <input type="password" id="password" class="form-input">
 
         <label for="confirm_password">Confirm Password:</label>
-        {{ form.confirm_password(class="form-input", id="confirm-password") }}
+        <input type="password" id="confirm" class="form-input">
 
         <button type="submit">Register</button>
     </form>
